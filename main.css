@@ -1,0 +1,14 @@
+#header{
+    text-align: center;
+}
+
+#button{
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    display:flex;
+}
+
+body{
+    background-image: url("https://thumbs.dreamstime.com/b/signboard-tiki-bar-signboard-tiki-bar-exotic-cocktail-mug-tiki-mask-bamboo-torch-fruits-hawaiian-139642187.jpg");
+}
