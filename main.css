@@ -1,3 +1,23 @@
+
+button {
+	background-color: white;
+	color: #7f661b;
+	padding: 11px;
+	border-radius: 25%;
+	font-size: 15px;
+    border: 1px solid #7f661b;
+    margin: 5px;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    color: white;
+    border: white 1px;
+    background:#7f661b;
+    box-shadow: 0 5px 15px white;
+  }
+
 body {
     background-image: url(https://i.pinimg.com/originals/13/3b/e8/133be84f10f9baa4a2127b0f3ff1d66b.jpg);
     background-size:auto;
