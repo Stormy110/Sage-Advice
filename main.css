@@ -20,8 +20,8 @@ body {
     background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-
 }
+
 #mind-main {
     margin: 35px 35px;
     border: #aea122 solid 5px;
@@ -44,7 +44,6 @@ body {
     background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-
 }
 
 h2 {
@@ -111,24 +110,9 @@ button {
 	font-size: 15px;
 }
 
-
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-
 #body-img {
-    height: 100%;
-    width: 90%;
+    height: 70%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -162,23 +146,6 @@ button {
 
 #body-c {
     overflow: hidden;
-}
-
-@media only screen and (max-width: 600px) {
-    body{display:flex;}
-    #buttons {
-        display:flex;
-        justify-content: space-evenly;
-        margin: 40px 0px 5px 0px;
-    }
-    #body-img {
-        height: auto;
-        width: 90%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-    } 
 }
 
 #mind-c {
@@ -230,11 +197,12 @@ button {
 }
 
 #soul-img {
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
     transition: transform .5s, filter 0.5s ease-in-out;
     filter: grayscale(100%);
 }
@@ -243,8 +211,6 @@ button {
     filter: grayscale(0);
     transform: scale(1.1);
     }
-
-/* adding stuff  changing*/
 
 span {
     display: inline-block;
@@ -269,20 +235,6 @@ h2 span:nth-child(4){
     animation-delay: 2s;
 }
 
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotateY(90deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0deg);
-    font-size:30px;
-
-    }}
-
-
-
 #mind-header {
     font-size: 100px;
     margin:0px 0px;
@@ -294,11 +246,7 @@ h2 span:nth-child(4){
     margin:0px 0px;
 }
 
-@keyframes hide {
-    to {
-        opacity: 0;
-    }
-}
+
 #body-header {
     font-size: 100px;
     margin:0px 0px;
@@ -323,8 +271,10 @@ h2 span:nth-child(4){
 }
 
 #return-button {
-    margin: 0px 0px 5px 350px;
+    float:right;
+    
 }
+
 
 #return:hover {
     animation: shake 0.5s;
@@ -336,6 +286,47 @@ h2 span:nth-child(4){
 	border-radius: 25%;
 	font-size: 15px;
 }
+
+/* Keyframes */
+
+@keyframes example {
+    0%   {background-color: black;}
+    25%  {background-color:forestgreen;}
+    50%  {background-color: silver;}
+    75% {background-color: forestgreen;}
+    100% {background-color: black;}
+  }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    font-size:30px;
+
+    }}
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+/* Media Querys*/
 
 @media only screen and (max-width: 600px) {
     body{display:flex;}
@@ -385,5 +376,8 @@ h2 span:nth-child(4){
     } 
     #return-button {
         margin: 0px 0px 5px 150px;
+    }
+    #main-main, #body-main, #soul-main, #mind-main {
+        margin:25px 25px;
     }
 }
