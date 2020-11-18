@@ -8,8 +8,10 @@ ajax(dogPics, (data) => {
     let soulBody = document.querySelector('#soul-main')
     let returnButton = document.querySelector('#return-button')   
     let soulImg = document.querySelector('#soul-img')
+    let soulP = document.querySelector('#soul-p')
+    soulP.innerText = ""
     soulImg.src = res.message
-    soulBody.append(soulImg,returnButton)
+    soulBody.append(soulImg,soulP,returnButton)
     change2()
   });
   function change2() {
