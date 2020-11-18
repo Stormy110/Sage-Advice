@@ -53,6 +53,11 @@ h2 {
     font-size:45px;
 
 }
+#main-header{
+    animation: animate 1s linear forwards;
+    opacity: 0;
+    animation-delay: .5s;
+}
 #main-img {
     height: auto;
     width: 100%;
@@ -111,8 +116,8 @@ button {
 }
 
 #body-img {
-    height: 70%;
-    width: 70%;
+    height: 50%;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -142,6 +147,7 @@ button {
     color: white;
     text-align: center;
     letter-spacing: .2em;
+    
 }
 
 #body-c {
