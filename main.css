@@ -1,6 +1,7 @@
 body {
     background-image: url(https://i.pinimg.com/originals/13/3b/e8/133be84f10f9baa4a2127b0f3ff1d66b.jpg);
     background-size:auto;
+    font-family: 'Fondamento';
 }
 @keyframes example {
     0%   {background-color: black;}
@@ -48,9 +49,9 @@ body {
 
 h2 {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     text-shadow: 2px 2px red;
+    font-size:45px;
 }
 #main-img {
     height: 50%;
@@ -62,7 +63,7 @@ h2 {
 #buttons {
     display:flex;
     justify-content: space-evenly;
-    margin: 70px 0px 0px 0px;
+    margin: 70px 0px 10px 0px;
 }
 
 #mind-button:hover {
@@ -106,5 +107,27 @@ h2 {
 #body-p {
     color:white;
     text-align:center;
-    font-size:20px;
+    font-size:30px;
+}
+
+@media only screen and (max-width: 600px) {
+    body{display:flex;}
+    #buttons {
+        display:flex;
+        justify-content: space-evenly;
+        margin: 40px 0px 5px 0px;
+    }
+    #body-img {
+        height: auto;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #body-p {
+        color:white;
+        text-align:center;
+        font-size:20px;
+    }
 }
