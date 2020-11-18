@@ -10,7 +10,12 @@ ajax(adslip, (data) => {
     let r = JSON.parse(data);
     console.log(r);
     mindP.innerText = `${r.slip.advice}`
+    change()
   });
 
 
-
+  function change() {
+    setInterval(function() {
+        document.querySelector("#mind-top-head").remove()
+    }, 2400);
+  }
