@@ -10,4 +10,10 @@ ajax(dogPics, (data) => {
     let soulImg = document.querySelector('#soul-img')
     soulImg.src = res.message
     soulBody.append(soulImg,returnButton)
+    change2()
   });
+  function change2() {
+    setInterval(function() {
+        document.querySelector("#soul-top-head").remove()
+    }, 2400);
+  }
