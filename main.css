@@ -247,6 +247,8 @@ button {
     transform: scale(1.1);
     }
 
+/* adding stuff */
+
 span {
     display: inline-block;
     animation: animate 1s linear forwards;
