@@ -7,6 +7,7 @@ ajax(dogPics, (data) => {
 
     // parses the data into an array of objects
     let res = JSON.parse(data)
+    console.log(res)
 
     // assigns variables to DOM elements
     let soulBody = document.querySelector('#soul-main')
