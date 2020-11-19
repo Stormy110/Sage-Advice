@@ -1,20 +1,29 @@
 import ajax from "./ajax.js"
-import { makeElements, getElements } from "./elements.js";
+
 
 // Mind - Advice slip
 const adslip = "https://api.adviceslip.com/advice";
 
-let mindP = document.querySelector("#mind-p")
 
+// API call for the random advice slip
 ajax(adslip, (data) => {
+
+    //parses the data into an array of objects that we can use
     let r = JSON.parse(data);
-    console.log(r);
+
+    //assigns variables to the DOM elements
+    let mindP = document.querySelector("#mind-p")
+    
+    //assigns the random advice to the p
     mindP.innerText = `${r.slip.advice}`
-    change()
+    
+    //removes the top head after 2 seconds
+    changeMind()
   });
 
 
-  function change() {
+  //defines the function to remove the top head in mind
+  function changeMind() {
     setInterval(function() {
         document.querySelector("#mind-top-head").remove()
     }, 2400);
