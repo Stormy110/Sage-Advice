@@ -1,3 +1,5 @@
+/* Background */
+
 body {
     background-image: url(https://i.pinimg.com/originals/13/3b/e8/133be84f10f9baa4a2127b0f3ff1d66b.jpg);
     background-size:auto;
@@ -14,7 +16,7 @@ body {
 		background-position: 0% 50%;
 	}
 }
-#main-main {
+#main-main, #mind-main, #body-main, #soul-main {
     margin: 35px 35px;
     border: #aea122 solid 5px;
     background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
@@ -22,49 +24,8 @@ body {
 	animation: gradient 15s ease infinite;
 }
 
-#mind-main {
-    margin: 35px 35px;
-    border: #aea122 solid 5px;
-    background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+/* Button Styling */
 
-}
-#body-main {
-    margin: 35px 35px;
-    border: #aea122 solid 5px;
-    background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-
-}
-#soul-main {
-    margin: 35px 35px;
-    border: #aea122 solid 5px;
-    background: linear-gradient(-45deg, #aea122, #066137, #011f11, #0e883d);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-h2 {
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    font-size:45px;
-
-}
-#main-header{
-    animation: animate 1s linear forwards;
-    opacity: 0;
-    animation-delay: .5s;
-}
-#main-img {
-    height: auto;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
 #buttons {
     display:flex;
     justify-content: space-evenly;
@@ -82,7 +43,7 @@ button {
     margin: 70px 0px 10px 0px;
 }
 
-#mind-button:hover {
+#mind-button:hover,#body-button:hover, #soul-button:hover, #return:hover  {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     color: white;
@@ -93,27 +54,20 @@ button {
 	font-size: 15px;
 }
 
-#body-button:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-    color: white;
-    border: white solid 1px;
-    background:#aea122;
-    padding: 11px;
-	border-radius: 25%;
-	font-size: 15px;
+#return-button {
+    float:right;
+    
 }
 
-#soul-button:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-    color: white;
-    border: white solid 1px;
-    background:#aea122;
-    padding: 11px;
-	border-radius: 25%;
-	font-size: 15px;
-}
+/* Image Styling */
+
+#main-img {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
 
 #body-img {
     height: 50%;
@@ -125,39 +79,6 @@ button {
     filter: grayscale(100%);
 }
 
-#body-img:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-    }
-
-#body-p {
-    color:white;
-    text-align:center;
-    font-size:20px;
-    animation: animate 1s linear forwards;
-    opacity: 0;
-    animation-delay: 2.5s;
-}
-
-#body-header h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    color: white;
-    text-align: center;
-    letter-spacing: .2em;
-    
-}
-
-#body-c {
-    overflow: hidden;
-}
-
-#mind-c {
-    overflow: hidden;
-}
-
 #mind-img {
     height: 20%;
     width: 20%;
@@ -166,40 +87,6 @@ button {
     margin-right: auto;
     transition: transform .5s, filter 0.5s ease-in-out;
     filter: grayscale(100%);
-}
-
-#mind-img:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-    }
-
-#mind-p {
-    color:white;
-    text-align:center;
-    font-size:20px;
-    animation: animate 1s linear forwards;
-    opacity: 0;
-    animation-delay: 2.5s;
-}
-
-#mind-header h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    color: white;
-    text-align: center;
-    letter-spacing: .2em;
-}
-
-#soul-header h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    color: white;
-    text-align: center;
-    letter-spacing: .2em;
 }
 
 #soul-img {
@@ -213,10 +100,60 @@ button {
     filter: grayscale(100%);
 }
 
-#soul-img:hover {
+#body-img:hover, #mind-img:hover, #soul-img:hover {
     filter: grayscale(0);
     transform: scale(1.1);
     }
+
+/* Text Styling */
+
+#main-header{
+    animation: animate 1s linear forwards;
+    opacity: 0;
+    animation-delay: .5s;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-size:45px;
+}
+
+#body-p, #mind-p {
+    color:white;
+    text-align:center;
+    font-size:20px;
+    animation: animate 1s linear forwards;
+    opacity: 0;
+    animation-delay: 2.5s;
+}
+
+#body-header h2, #mind-header h2, #soul-header h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: white;
+    text-align: center;
+    letter-spacing: .2em;
+    
+}
+
+#body-c, #mind-c {
+    overflow: hidden;
+}
+
+#mind-header, #body-header, #soul-header {
+    font-size: 100px;
+    margin:0px 0px;
+    
+}
+#mind-top-head, #body-top-head, #soul-top-head {
+    animation: hide 1s linear 2s 1 forwards;
+    font-size:30px;
+    margin:0px 0px;
+}
 
 span {
     display: inline-block;
@@ -239,58 +176,6 @@ h2 span:nth-child(3){
 h2 span:nth-child(4){
     opacity: 0;
     animation-delay: 2s;
-}
-
-#mind-header {
-    font-size: 100px;
-    margin:0px 0px;
-    
-}
-#mind-top-head {
-    animation: hide 1s linear 2s 1 forwards;
-    font-size:30px;
-    margin:0px 0px;
-}
-
-
-#body-header {
-    font-size: 100px;
-    margin:0px 0px;
-    
-}
-#body-top-head {
-    animation: hide 1s linear 2s 1 forwards;
-    font-size:30px;
-    margin:0px 0px;
-}
-
-
-#soul-header {
-    font-size: 100px;
-    margin:0px 0px;
-    
-}
-#soul-top-head {
-    animation: hide 1s linear 2s 1 forwards;
-    font-size:30px;
-    margin:0px 0px;
-}
-
-#return-button {
-    float:right;
-    
-}
-
-
-#return:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-    color: white;
-    border: white solid 1px;
-    background:#aea122;
-    padding: 11px;
-	border-radius: 25%;
-	font-size: 15px;
 }
 
 /* Keyframes */
@@ -341,7 +226,7 @@ h2 span:nth-child(4){
         justify-content: space-evenly;
         margin: 40px 0px 5px 0px;
     }
-    #body-img {
+    #body-img, #mind-img, #soul-img {
         height: auto;
         width: 90%;
         display: block;
@@ -349,24 +234,10 @@ h2 span:nth-child(4){
         margin-right: auto;
     }
     
-    #body-p {
+    #body-p, #mind-p {
         color:white;
         text-align:center;
         font-size:20px;
-    }
-    #mind-img {
-        height: auto;
-        width: 90%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #soul-img {
-        height: auto;
-        width: 90%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
     #main-img {
         height: auto;
